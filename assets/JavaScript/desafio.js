@@ -29,10 +29,13 @@ class Heroi {
 }
 
 (function () {
-    const nome = 'Leon';
-    const xp = 4287;
+    const herois = [
+        new Heroi('Henrique', 12948),
+        new Heroi('Sophia', 9835),
+        new Heroi('Timotio', 6785)
+    ]
 
-    const heroi = new Heroi(nome, xp)
-
-    console.log(`O herói de nome ${heroi.nome} está no nível de ${heroi.classificadorHeroi()}`)
+    for (const heroi of herois) {
+        console.log(`O herói de nome ${heroi.nome} está no nível de ${heroi.classificadorHeroi()}`)
+    }
 })();
